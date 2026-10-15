@@ -10,12 +10,21 @@ import ContactPage from '@/pages/ContactPage';
 import FAQPage from '@/pages/FAQPage';
 import ServiceLocationPage from '@/pages/ServiceLocationPage';
 import { parseServiceLocationUrl } from '@/lib/routes';
+import ScrollToTop from '@/components/ScrollToTop';
+import BackToTopButton from '@/components/BackToTopButton';
+import MobileCallButton from '@/components/MobileCallButton';
+
+function DynamicRouteHandler() {
+  const location = useLocation();
+  const isServiceLocation = parseServiceLocationUrl(location.pathname) !== null;
+
+  if (isServiceLocation) {
+    return <ServiceLocationPage />;
+  }
+  return <NotFound />;
+}
 
 function AppRoutes() {
-  const location = useLocation();
-  const path = location.pathname.replace(/^\//, '').replace(/\/$/, '');
-  const isServiceLocation = parseServiceLocationUrl(`/${path}`) !== null;
-
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -24,7 +33,7 @@ function AppRoutes() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/faq" element={<FAQPage />} />
-      {isServiceLocation && <Route path={path} element={<ServiceLocationPage />} />}
+      <Route path="/:slug" element={<DynamicRouteHandler />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
@@ -33,12 +42,15 @@ function AppRoutes() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
           <AppRoutes />
         </main>
         <Footer />
+        <BackToTopButton />
+        <MobileCallButton />
       </div>
     </BrowserRouter>
   );

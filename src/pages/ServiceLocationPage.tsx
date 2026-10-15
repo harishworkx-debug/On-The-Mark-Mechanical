@@ -15,27 +15,17 @@ import { getService } from '@/data/services';
 import { getLocation, locations } from '@/data/locations';
 import { services } from '@/data/services';
 import { business } from '@/data/business';
-import { serviceLocationUrl, baseUrl } from '@/lib/routes';
+import { serviceLocationUrl, baseUrl, parseServiceLocationUrl } from '@/lib/routes';
 import { localBusinessJsonLd, serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from '@/lib/jsonLd';
 
 export default function ServiceLocationPage() {
   const navLocation = useLocation();
-  const path = navLocation.pathname;
-  const parsed = (() => {
-    for (const svc of services) {
-      for (const loc of locations) {
-        if (path === `/${svc.slug}-${loc.slug}`) {
-          return { serviceSlug: svc.slug, locationSlug: loc.slug };
-        }
-      }
-    }
-    return null;
-  })();
+  const parsed = parseServiceLocationUrl(navLocation.pathname);
 
   if (!parsed) return null;
 
-  const service = getService(parsed.serviceSlug);
-  const location = getLocation(parsed.locationSlug);
+  const service = getService(parsed.service);
+  const location = getLocation(parsed.location);
   if (!service || !location) return null;
 
   const canonicalPath = serviceLocationUrl(service.slug, location.slug);

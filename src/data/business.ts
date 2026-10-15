@@ -13,6 +13,6 @@ export const business = {
   },
   mapsLink: 'https://maps.app.goo.gl/otYDoNV9RfB188hE6',
   mapsEmbed:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.8764892946896!2d-83.7684668!3d42.2701337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae4a3f6a0001%3A0x0!2s3526%20W%20Liberty%20Rd%20Suite%20300%2C%20Ann%20Arbor%2C%20MI%2048103!5e0!3m2!1sen!2sus!4v1700000000000',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.2628817239415!2d-83.80354948828061!3d42.27291147108102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f2e8a5ab6b7%3A0x72b4b558b5a8026!2sOn%20The%20Mark%20Mechanical!5e0!3m2!1sen!2sin!4v1792064569811!5m2!1sen!2sin',
   primaryLocationSlug: 'ann-arbor-mi',
 };
