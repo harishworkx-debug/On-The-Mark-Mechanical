@@ -137,6 +137,26 @@ export default function Header() {
               About
             </NavLink>
             <NavLink
+              to="/reviews"
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive ? 'bg-sky-500 text-white' : 'text-gray-200 hover:bg-navy-800 hover:text-white'
+                }`
+              }
+            >
+              Reviews
+            </NavLink>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive ? 'bg-sky-500 text-white' : 'text-gray-200 hover:bg-navy-800 hover:text-white'
+                }`
+              }
+            >
+              Guides
+            </NavLink>
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 `px-4 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -249,6 +269,28 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
               >
                 About
+              </NavLink>
+              <NavLink
+                to="/reviews"
+                className={({ isActive }) =>
+                  `block px-4 py-3 rounded-md text-base font-medium transition-colors ${
+                    isActive ? 'bg-sky-500 text-white' : 'text-gray-200 hover:bg-navy-800 hover:text-white'
+                  }`
+                }
+                onClick={() => setMobileOpen(false)}
+              >
+                Reviews
+              </NavLink>
+              <NavLink
+                to="/resources"
+                className={({ isActive }) =>
+                  `block px-4 py-3 rounded-md text-base font-medium transition-colors ${
+                    isActive ? 'bg-sky-500 text-white' : 'text-gray-200 hover:bg-navy-800 hover:text-white'
+                  }`
+                }
+                onClick={() => setMobileOpen(false)}
+              >
+                HVAC Guides &amp; Resources
               </NavLink>
               <NavLink
                 to="/contact"

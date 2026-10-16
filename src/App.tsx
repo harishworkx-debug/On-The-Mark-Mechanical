@@ -8,6 +8,9 @@ import ServiceAreasPage from '@/pages/ServiceAreasPage';
 import AboutPage from '@/pages/AboutPage';
 import ContactPage from '@/pages/ContactPage';
 import FAQPage from '@/pages/FAQPage';
+import ReviewsPage from '@/pages/ReviewsPage';
+import ResourcesPage from '@/pages/ResourcesPage';
+import ArticleDetailPage from '@/pages/ArticleDetailPage';
 import ServiceLocationPage from '@/pages/ServiceLocationPage';
 import { parseServiceLocationUrl } from '@/lib/routes';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -31,6 +34,9 @@ function AppRoutes() {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/service-areas" element={<ServiceAreasPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/reviews" element={<ReviewsPage />} />
+      <Route path="/resources" element={<ResourcesPage />} />
+      <Route path="/resources/:slug" element={<ArticleDetailPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/:slug" element={<DynamicRouteHandler />} />

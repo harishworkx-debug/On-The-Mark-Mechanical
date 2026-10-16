@@ -28,6 +28,14 @@ export function localBusinessJsonLd() {
       'Belleville, MI',
     ],
     hasMap: business.mapsLink,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.4',
+      reviewCount: '11',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    priceRange: '$$',
   };
 }
 

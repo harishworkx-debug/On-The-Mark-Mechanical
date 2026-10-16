@@ -31,6 +31,19 @@ export default function Footer() {
               <Phone className="h-4 w-4" />
               {business.phoneDisplay}
             </a>
+
+            <div className="mt-4 pt-3 border-t border-navy-800">
+              <Link
+                to="/reviews"
+                className="inline-flex items-center gap-2 text-xs text-gray-300 hover:text-white transition-colors"
+              >
+                <div className="flex text-amber-400">
+                  {'★★★★★'}
+                </div>
+                <span className="font-bold text-white">4.4</span>
+                <span className="text-gray-400">· 11 Google Reviews</span>
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -126,6 +139,9 @@ export default function Footer() {
           <div className="flex gap-4 text-xs text-gray-500">
             <Link to="/services" className="hover:text-sky-400 transition-colors">Services</Link>
             <Link to="/service-areas" className="hover:text-sky-400 transition-colors">Service Areas</Link>
+            <Link to="/resources" className="hover:text-sky-400 transition-colors">Guides</Link>
+            <Link to="/reviews" className="hover:text-sky-400 transition-colors">Reviews</Link>
+            <Link to="/about" className="hover:text-sky-400 transition-colors">About</Link>
             <Link to="/faq" className="hover:text-sky-400 transition-colors">FAQ</Link>
             <Link to="/contact" className="hover:text-sky-400 transition-colors">Contact</Link>
           </div>

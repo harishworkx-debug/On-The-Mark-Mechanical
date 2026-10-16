@@ -35,6 +35,8 @@ export const coreRoutes = [
   '/services',
   '/service-areas',
   '/about',
+  '/reviews',
+  '/resources',
   '/contact',
   '/faq',
 ];

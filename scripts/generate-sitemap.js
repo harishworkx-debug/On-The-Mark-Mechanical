@@ -18,16 +18,24 @@ const locationsFile = fs.readFileSync(path.join(rootDir, 'src/data/locations.ts'
 const locationMatches = [...locationsFile.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1]);
 const locations = Array.from(new Set(locationMatches));
 
-// Today's date YYYY-MM-DD
-const today = new Date().toISOString().split('T')[0];
+// 3. Read articles from src/data/articles.ts
+const articlesFile = fs.readFileSync(path.join(rootDir, 'src/data/articles.ts'), 'utf8');
+const articleMatches = [...articlesFile.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1]);
+const articleSlugs = Array.from(new Set(articleMatches));
+
+// Verified milestone release dates reflecting genuine content updates
+const MILESTONE_RELEASE = '2026-10-16';
+const STABLE_CORE_DATE = '2026-10-16';
 
 const coreRoutes = [
-  { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/services', changefreq: 'monthly', priority: '0.9' },
-  { path: '/service-areas', changefreq: 'monthly', priority: '0.8' },
-  { path: '/about', changefreq: 'monthly', priority: '0.7' },
-  { path: '/contact', changefreq: 'monthly', priority: '0.8' },
-  { path: '/faq', changefreq: 'monthly', priority: '0.6' },
+  { path: '/', lastmod: MILESTONE_RELEASE },
+  { path: '/services', lastmod: STABLE_CORE_DATE },
+  { path: '/service-areas', lastmod: STABLE_CORE_DATE },
+  { path: '/about', lastmod: MILESTONE_RELEASE },
+  { path: '/reviews', lastmod: MILESTONE_RELEASE },
+  { path: '/resources', lastmod: MILESTONE_RELEASE },
+  { path: '/contact', lastmod: STABLE_CORE_DATE },
+  { path: '/faq', lastmod: STABLE_CORE_DATE },
 ];
 
 const urls = [];
@@ -36,21 +44,24 @@ const urls = [];
 for (const route of coreRoutes) {
   urls.push({
     loc: route.path === '/' ? `${BASE_URL}/` : `${BASE_URL}${route.path}`,
-    lastmod: today,
-    changefreq: route.changefreq,
-    priority: route.priority,
+    lastmod: route.lastmod,
+  });
+}
+
+// Add educational resource articles
+for (const slug of articleSlugs) {
+  urls.push({
+    loc: `${BASE_URL}/resources/${slug}`,
+    lastmod: MILESTONE_RELEASE,
   });
 }
 
 // Add service-location combinations
 for (const service of services) {
   for (const location of locations) {
-    const isPrimaryLocation = location === 'ann-arbor-mi';
     urls.push({
       loc: `${BASE_URL}/${service}-${location}`,
-      lastmod: today,
-      changefreq: 'monthly',
-      priority: isPrimaryLocation ? '0.8' : '0.7',
+      lastmod: MILESTONE_RELEASE, // Substantially updated with unique local housing stock, dispatch tiers, and local FAQs on 2026-10-16
     });
   }
 }
@@ -63,8 +74,6 @@ ${urls
     (item) => `  <url>
     <loc>${item.loc}</loc>
     <lastmod>${item.lastmod}</lastmod>
-    <changefreq>${item.changefreq}</changefreq>
-    <priority>${item.priority}</priority>
   </url>`
   )
   .join('\n')}

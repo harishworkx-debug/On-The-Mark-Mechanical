@@ -12,12 +12,14 @@ import {
   Clock,
   CheckCircle2,
   MapPin,
+  Star,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ServiceCard from '@/components/ServiceCard';
 import CTASection from '@/components/CTASection';
 import FAQAccordion from '@/components/FAQAccordion';
+import ReviewsSection, { GoogleIcon } from '@/components/ReviewsSection';
 import { business } from '@/data/business';
 import { services } from '@/data/services';
 import { locations } from '@/data/locations';
@@ -59,8 +61,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="On The Mark Mechanical | HVAC Services in Ann Arbor, MI"
-        description="Heating & cooling services in Ann Arbor, Michigan. Contact On The Mark Mechanical for air conditioning repair, furnace repair, HVAC installation, and more. Call 734-222-0918."
+        title="HVAC Services in Ann Arbor, MI | On The Mark Mechanical"
+        description="Need AC repair or heating service in Ann Arbor, MI? On The Mark Mechanical can help diagnose cooling problems and explain your repair options. Call (734) 222-0918 to discuss your HVAC service needs."
         canonicalPath="/"
         ogImage={heroImage}
         jsonLd={[localBusinessJsonLd(), faqJsonLd(homeFaqs)]}
@@ -70,21 +72,24 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative bg-navy-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="HVAC technician repairing an air conditioning unit" className="h-full w-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-800/60" />
+          <img src={heroImage} alt="HVAC technician repairing an air conditioning unit in Ann Arbor" className="h-full w-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-800/70" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="max-w-2xl">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/20 px-4 py-1.5 text-sm font-medium text-sky-300 ring-1 ring-sky-500/30 mb-6">
               <MapPin className="h-4 w-4" />
-              Ann Arbor, Michigan
+              <span>Ann Arbor, MI · 3526 W Liberty Rd</span>
+              <span className="text-white/40">|</span>
+              <span>20+ Years Serving Washtenaw County</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Heating &amp; Cooling Services in Ann Arbor, Michigan
+              HVAC Services in Ann Arbor, MI
             </h1>
-            <p className="mt-6 text-lg text-gray-200 leading-relaxed">
-              Contact On The Mark Mechanical to discuss your heating, cooling, and HVAC service
-              needs.
+            <p className="mt-6 text-xl text-gray-200 leading-relaxed font-normal">
+              Trusted heating, air conditioning, and ventilation service by On The Mark Mechanical.
+              From emergency AC and furnace repair to complete high-efficiency system installations,
+              we deliver transparent diagnostics, honest advice, and zero sales pressure.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
@@ -95,12 +100,36 @@ export default function HomePage() {
                 Call {business.phoneDisplay}
               </a>
               <Link
-                to="/services"
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-7 py-4 text-lg font-semibold text-white ring-1 ring-white/30 backdrop-blur transition-all hover:bg-white/20"
               >
-                Explore Our Services
+                Request Service / Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
+            </div>
+
+            {/* Google Reviews Hero Trust Badge */}
+            <div className="mt-8 flex flex-wrap items-center gap-4 pt-6 border-t border-white/10">
+              <div className="flex items-center gap-2">
+                <GoogleIcon className="h-5 w-5" />
+                <div className="flex items-center gap-1 text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <span className="font-bold text-white text-sm">4.4 Rating</span>
+              </div>
+              <span className="text-gray-400 hidden sm:inline">·</span>
+              <a
+                href="#reviews"
+                className="text-sm font-medium text-sky-300 hover:text-sky-200 underline underline-offset-4"
+              >
+                11 Verified Google Reviews
+              </a>
+              <span className="text-gray-400 hidden sm:inline">·</span>
+              <span className="text-xs text-gray-300 bg-white/10 px-2.5 py-1 rounded-md">
+                Licensed MI Mechanical Contractor · EPA Universal
+              </span>
             </div>
           </div>
         </div>
@@ -138,43 +167,87 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3.5 py-1 text-xs font-semibold text-sky-700 ring-1 ring-sky-200 mb-4">
+                <MapPin className="h-3.5 w-3.5" />
+                Shop HQ: 3526 W Liberty Rd, Suite 300, Ann Arbor
+              </div>
               <h2 className="text-3xl font-bold text-navy-900 sm:text-4xl">
-                Your Local HVAC Contractor in Ann Arbor
+                Your Trusted HVAC Contractor in Ann Arbor, MI
               </h2>
               <p className="mt-6 text-gray-600 leading-relaxed">
-                On The Mark Mechanical is an HVAC contractor based in Ann Arbor, Michigan. We
-                provide heating and cooling services to homes and businesses throughout the
-                surrounding area.
+                On The Mark Mechanical is an established heating, cooling, and commercial refrigeration contractor
+                headquartered at <strong>3526 W Liberty Rd, Suite 300, Ann Arbor, MI 48103</strong>.
+                For more than two decades, we have provided Washtenaw County residents and commercial facility managers
+                with dependable, high-integrity HVAC craftsmanship.
               </p>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                From air conditioning repair to furnace installation, our technicians work to
-                deliver reliable service and straightforward communication. When you call us, you
-                get a real conversation about your needs and honest recommendations for your
-                system.
+                When you call us at <strong>{business.phoneDisplay}</strong>, you speak directly with knowledgeable professionals.
+                Our seasoned field team—including service diagnostics lead <em>Richard</em>, installation specialist <em>Rick</em>, and master diagnostic tech <em>Terry</em>—is known for thorough explanations, clean job sites, and zero sales pressure.
+                We provide honest repair-versus-replace guidance so you can make confident, budget-smart decisions for your property.
               </p>
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  'Air conditioning repair and installation',
-                  'Furnace repair and installation',
-                  'Heat pump services',
-                  'HVAC maintenance and tune-ups',
-                  'Thermostat installation and repair',
-                  'Indoor air quality solutions',
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-gray-700">
-                    <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-sky-500" />
-                    <span className="text-sm font-medium">{item}</span>
-                  </div>
-                ))}
+
+              {/* Direct Ann Arbor Internal Links */}
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">
+                  Popular Ann Arbor HVAC Services:
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <Link
+                    to="/air-conditioning-repair-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>AC Repair in Ann Arbor</span>
+                  </Link>
+                  <Link
+                    to="/furnace-repair-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>Furnace Repair in Ann Arbor</span>
+                  </Link>
+                  <Link
+                    to="/heat-pump-services-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>Heat Pumps &amp; Mini-Splits</span>
+                  </Link>
+                  <Link
+                    to="/air-conditioning-installation-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>AC Replacement &amp; Install</span>
+                  </Link>
+                  <Link
+                    to="/furnace-installation-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>Furnace Replacement &amp; Install</span>
+                  </Link>
+                  <Link
+                    to="/commercial-hvac-ann-arbor-mi"
+                    className="flex items-center gap-2 text-sm font-medium text-navy-900 hover:text-sky-600 transition-colors group"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <span>Commercial HVAC &amp; RTUs</span>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-900/10">
               <img
                 src={aboutImage}
-                alt="HVAC technician inspecting an outdoor unit during maintenance"
+                alt="On The Mark Mechanical HVAC technician inspecting an outdoor unit in Ann Arbor"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
+              <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-navy-900/90 backdrop-blur p-4 text-white text-xs">
+                <div className="font-semibold text-sky-300">Fast Local Response from Ann Arbor</div>
+                <div className="text-gray-300 mt-0.5">Dispatched from 3526 W Liberty Rd to all Washtenaw County neighborhoods.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -288,8 +361,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Customer Reviews Section */}
+      <ReviewsSection
+        id="reviews"
+        title="Real Google Customer Reviews"
+        subtitle="Genuine reviews from Ann Arbor homeowners and businesses who trust On The Mark Mechanical."
+        initialLimit={6}
+        showFilters={true}
+      />
+
       {/* Service Locations */}
-      <section className="bg-gray-50 py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-navy-900 sm:text-4xl">Communities We Serve</h2>
@@ -323,7 +405,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Preview */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-gray-50 py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-navy-900 sm:text-4xl">Frequently Asked Questions</h2>
