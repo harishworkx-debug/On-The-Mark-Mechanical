@@ -56,7 +56,7 @@ export default function ServiceAreasPage() {
     <>
       <SEO
         title="HVAC Service Areas in Washtenaw & Wayne Counties | On The Mark Mechanical"
-        description="Explore HVAC service coverage across Ann Arbor, Dexter, Saline, Chelsea, Ypsilanti, Canton, Plymouth, and Belleville. Fast dispatch from 3526 W Liberty Rd. Call (734) 222-0918."
+        description="Explore HVAC service coverage across Ann Arbor, Dexter, Saline, Chelsea, Ypsilanti, Canton, Plymouth, and Belleville. Fast dispatch from 3526 W Liberty Rd. Call (734) 294-5501."
         canonicalPath="/service-areas"
         jsonLd={[localBusinessJsonLd()]}
       />
@@ -285,7 +285,7 @@ export default function ServiceAreasPage() {
 
       <CTASection
         title="Don't See Your Specific Neighborhood Listed?"
-        subtitle="If you live in Washtenaw County or Western Wayne County, chances are we can dispatch to your home or facility. Call 734-222-0918 to confirm availability."
+        subtitle="If you live in Washtenaw County or Western Wayne County, chances are we can dispatch to your home or facility. Call (734) 294-5501 to confirm availability."
       />
     </>
   );

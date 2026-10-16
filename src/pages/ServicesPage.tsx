@@ -32,7 +32,7 @@ export default function ServicesPage() {
     <>
       <SEO
         title="HVAC Services in Ann Arbor, MI | On The Mark Mechanical"
-        description="Comprehensive heating, cooling, heat pump, commercial HVAC, and refrigeration services in Ann Arbor, MI. Upfront transparent estimates, expert diagnostics, and no sales pressure. Call (734) 222-0918."
+        description="Comprehensive heating, cooling, heat pump, commercial HVAC, and refrigeration services in Ann Arbor, MI. Upfront transparent estimates, expert diagnostics, and no sales pressure. Call (734) 294-5501."
         canonicalPath="/services"
         jsonLd={[localBusinessJsonLd()]}
       />
@@ -590,7 +590,7 @@ export default function ServicesPage() {
 
       <CTASection
         title="Have Questions or Need an Upfront Estimate?"
-        subtitle="Call 734-222-0918 to speak with our service team directly. We are happy to explain your options."
+        subtitle="Call (734) 294-5501 to speak with our service team directly. We are happy to explain your options."
       />
     </>
   );

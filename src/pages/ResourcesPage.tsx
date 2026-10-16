@@ -290,7 +290,7 @@ export default function ResourcesPage() {
 
       <CTASection
         title="Need Hands-On Diagnosis From Richard, Rick or Terry?"
-        subtitle="Call 734-222-0918. We provide upfront flat-rate estimates, honest advice, and fast local dispatch."
+        subtitle="Call (734) 294-5501. We provide upfront flat-rate estimates, honest advice, and fast local dispatch."
       />
     </>
   );

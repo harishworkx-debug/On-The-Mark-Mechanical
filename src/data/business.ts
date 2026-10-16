@@ -2,8 +2,8 @@ export const business = {
   name: 'On The Mark Mechanical',
   type: 'HVAC Contractor',
   website: 'https://www.onthemarkmechanical.com/',
-  phoneDisplay: '734-222-0918',
-  phoneLink: 'tel:7342220918',
+  phoneDisplay: '(734) 294-5501',
+  phoneLink: 'tel:+17342945501',
   address: {
     street: '3526 W Liberty Rd, Suite 300',
     city: 'Ann Arbor',

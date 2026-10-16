@@ -34,7 +34,7 @@ const processSteps = [
   {
     icon: Phone,
     title: 'Call Us',
-    description: 'Contact us at 734-222-0918 to discuss your HVAC needs and schedule a visit.',
+    description: 'Contact us at (734) 294-5501 to discuss your HVAC needs and schedule a visit.',
   },
   {
     icon: Wrench,
@@ -62,7 +62,7 @@ export default function HomePage() {
     <>
       <SEO
         title="HVAC Services in Ann Arbor, MI | On The Mark Mechanical"
-        description="Need AC repair or heating service in Ann Arbor, MI? On The Mark Mechanical can help diagnose cooling problems and explain your repair options. Call (734) 222-0918 to discuss your HVAC service needs."
+        description="Need AC repair or heating service in Ann Arbor, MI? On The Mark Mechanical can help diagnose cooling problems and explain your repair options. Call (734) 294-5501 to discuss your HVAC service needs."
         canonicalPath="/"
         ogImage={heroImage}
         jsonLd={[localBusinessJsonLd(), faqJsonLd(homeFaqs)]}

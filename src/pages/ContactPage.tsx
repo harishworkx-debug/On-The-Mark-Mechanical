@@ -46,7 +46,7 @@ export default function ContactPage() {
     <>
       <SEO
         title="Contact On The Mark Mechanical | Ann Arbor, MI HVAC"
-        description="Contact On The Mark Mechanical at (734) 222-0918 or visit 3526 W Liberty Rd, Suite 300, Ann Arbor, MI. Verified hours, fast dispatch, and online quote requests."
+        description="Contact On The Mark Mechanical at (734) 294-5501 or visit 3526 W Liberty Rd, Suite 300, Ann Arbor, MI. Verified hours, fast dispatch, and online quote requests."
         canonicalPath="/contact"
         jsonLd={[localBusinessJsonLd()]}
       />

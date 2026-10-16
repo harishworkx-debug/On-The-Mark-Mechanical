@@ -33,7 +33,7 @@ export default function FAQPage() {
     <>
       <SEO
         title="HVAC FAQ | On The Mark Mechanical Ann Arbor, MI"
-        description="Frequently asked questions about Ann Arbor HVAC repairs, furnace diagnostics, AC replacement, utility rebates, and emergency dispatch from 3526 W Liberty Rd. Call (734) 222-0918."
+        description="Frequently asked questions about Ann Arbor HVAC repairs, furnace diagnostics, AC replacement, utility rebates, and emergency dispatch from 3526 W Liberty Rd. Call (734) 294-5501."
         canonicalPath="/faq"
         jsonLd={[localBusinessJsonLd(), faqJsonLd(generalFAQs)]}
       />
