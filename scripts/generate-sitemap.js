@@ -24,8 +24,8 @@ const articleMatches = [...articlesFile.matchAll(/slug:\s*'([^']+)'/g)].map((m) 
 const articleSlugs = Array.from(new Set(articleMatches));
 
 // Verified milestone release dates reflecting genuine content updates
-const MILESTONE_RELEASE = '2026-10-16';
-const STABLE_CORE_DATE = '2026-10-16';
+const MILESTONE_RELEASE = '2026-10-29';
+const STABLE_CORE_DATE = '2026-10-29';
 
 const coreRoutes = [
   { path: '/', lastmod: MILESTONE_RELEASE },

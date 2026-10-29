@@ -13,7 +13,7 @@ export const generalFAQs: FAQItem[] = [
       'We dispatch directly from our central facility at 3526 W Liberty Rd, Suite 300, Ann Arbor, MI. For no-heat emergencies during freezing Michigan winter temperatures or total AC failures during summer heat waves, our typical dispatch response is between 15 to 45 minutes for Ann Arbor, Scio, and Pittsfield, with on-call emergency dispatch across Washtenaw County.',
     category: 'General & Emergency',
     linkPath: '/contact',
-    linkText: 'Call Our Ann Arbor Dispatch (734-294-5501)',
+    linkText: 'Call Our Ann Arbor Dispatch (734) 294-5501',
   },
   {
     question: 'How much does a service diagnostic call cost, and do you give upfront quotes?',

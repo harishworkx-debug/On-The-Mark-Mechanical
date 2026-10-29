@@ -92,7 +92,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'air-conditioning-repair',
     relatedServiceUrl: '/air-conditioning-repair-ann-arbor-mi',
-    relatedServiceCta: 'Schedule AC Diagnostic in Ann Arbor (734-294-5501)',
+    relatedServiceCta: 'Schedule AC Diagnostic in Ann Arbor (734) 294-5501',
   },
   {
     slug: 'furnace-repair-vs-replacement-michigan',
@@ -147,7 +147,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'furnace-repair',
     relatedServiceUrl: '/furnace-repair-ann-arbor-mi',
-    relatedServiceCta: 'Get an Honest Heating Evaluation (734-294-5501)',
+    relatedServiceCta: 'Get an Honest Heating Evaluation (734) 294-5501',
   },
   {
     slug: 'hvac-maintenance-checklist-michigan-winter',
@@ -204,7 +204,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'hvac-maintenance',
     relatedServiceUrl: '/hvac-maintenance-ann-arbor-mi',
-    relatedServiceCta: 'Book Fall Furnace Tune-Up (734-294-5501)',
+    relatedServiceCta: 'Book Fall Furnace Tune-Up (734) 294-5501',
   },
   {
     slug: 'why-ac-unit-freezes-up',
@@ -268,7 +268,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'air-conditioning-repair',
     relatedServiceUrl: '/air-conditioning-repair-ann-arbor-mi',
-    relatedServiceCta: 'Call For Frozen AC Diagnosis (734-294-5501)',
+    relatedServiceCta: 'Call For Frozen AC Diagnosis (734) 294-5501',
   },
   {
     slug: 'heat-pump-vs-furnace-michigan',
@@ -323,7 +323,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'heat-pump-services',
     relatedServiceUrl: '/heat-pump-services-ann-arbor-mi',
-    relatedServiceCta: 'Explore Heat Pump Options (734-294-5501)',
+    relatedServiceCta: 'Explore Heat Pump Options (734) 294-5501',
   },
   {
     slug: 'commercial-refrigeration-repair-ann-arbor',
@@ -378,7 +378,7 @@ export const articles: Article[] = [
     ],
     relatedServiceSlug: 'commercial-refrigeration',
     relatedServiceUrl: '/commercial-refrigeration-ann-arbor-mi',
-    relatedServiceCta: 'Contact Commercial Dispatch (734-294-5501)',
+    relatedServiceCta: 'Contact Commercial Dispatch (734) 294-5501',
   },
 ];
 
